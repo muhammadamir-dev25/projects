@@ -4,9 +4,9 @@ import {
   UserOutlined,
   FileTextOutlined,
   PictureOutlined,
-  CommentOutlined,
-  CheckSquareOutlined,
-  DatabaseOutlined,
+  // CommentOutlined,
+  // CheckSquareOutlined,
+  // DatabaseOutlined,
 } from "@ant-design/icons";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Title from "antd/es/typography/Title";
@@ -24,26 +24,26 @@ const items: MenuItemType[] = [
     icon: <FileTextOutlined />,
     label: <Link to="/posts">Posts</Link>,
   },
-  {
-    key: "/comments",
-    icon: <CommentOutlined />,
-    label: <Link to="/comments">Comments</Link>,
-  },
+  // {
+  //   key: "/comments",
+  //   icon: <CommentOutlined />,
+  //   label: <Link to="/comments">Comments</Link>,
+  // },
   {
     key: "/albums",
     icon: <PictureOutlined />,
     label: <Link to="/albums">Albums</Link>,
   },
-  {
-    key: "/photos",
-    icon: <DatabaseOutlined />,
-    label: <Link to="/photos">Photos</Link>,
-  },
-  {
-    key: "/todos",
-    icon: <CheckSquareOutlined />,
-    label: <Link to="/todos">Todos</Link>,
-  },
+  // {
+  //   key: "/photos",
+  //   icon: <DatabaseOutlined />,
+  //   label: <Link to="/photos">Photos</Link>,
+  // },
+  // {
+  //   key: "/todos",
+  //   icon: <CheckSquareOutlined />,
+  //   label: <Link to="/todos">Todos</Link>,
+  // },
   {
     key: "/users",
     icon: <UserOutlined />,

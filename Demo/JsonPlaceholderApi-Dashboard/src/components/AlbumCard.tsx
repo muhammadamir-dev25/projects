@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import type { Album } from "../shared/types/jsonPlaceholder";
 import { useGetUserByIdQuery } from "../api/jsonPlaceholderApi";
 import { UserOutlined, PictureOutlined } from "@ant-design/icons";
-import { replaceSimbols } from "../shared/hooks";
 
 interface AlbumCardProps {
   item: Album;
@@ -11,14 +10,13 @@ interface AlbumCardProps {
 }
 export default function AlbumCard({ item, onAlbumClick }: AlbumCardProps) {
   const { data, isLoading } = useGetUserByIdQuery(item.userId);
-  const username = data?.username || "Unknown person";
 
   return (
     <Card
       loading={isLoading}
       title={
-        <Link to={replaceSimbols(username)}>
-          <UserOutlined /> {username}
+        <Link to={`/users/${data?.id}`} state={data?.id}>
+          <UserOutlined /> {data?.username}
         </Link>
       }
       actions={[

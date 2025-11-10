@@ -10,14 +10,13 @@ interface PostCardProps {
 }
 export default function PostCard({ item, onCommentsClick }: PostCardProps) {
   const { data, isLoading } = useGetUserByIdQuery(item.userId);
-  const username = data?.username || "Unknown person";
 
   return (
     <Card
       loading={isLoading}
       title={
-        <Link to={`/users/${data?.id}`}>
-          <UserOutlined /> {username}
+        <Link to={`/users/${data?.id}`} state={data?.id}>
+          <UserOutlined /> {data?.username}
         </Link>
       }
       actions={[
@@ -25,7 +24,7 @@ export default function PostCard({ item, onCommentsClick }: PostCardProps) {
           onClick={(_e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
             onCommentsClick?.(item.id);
           }}
-        />
+        />,
       ]}
     >
       <Card.Meta title={item.title} description={item.body} />

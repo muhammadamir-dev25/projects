@@ -1,7 +1,11 @@
 import { Card, Descriptions } from "antd";
 import type { User } from "../shared/types/jsonPlaceholder";
 import { Link } from "react-router-dom";
-import { FileTextOutlined, PictureOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  FileTextOutlined,
+  PictureOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 
 interface UserCardProps {
   user: User;
@@ -11,7 +15,7 @@ export default function UserCard({ user, onDrawerOpen }: UserCardProps) {
   return (
     <Card
       title={
-        <Link to={`/users/${user.id}`}>
+        <Link to={`/users/${user?.id}`} state={user?.id}>
           <UserOutlined /> {user.username}
         </Link>
       }
