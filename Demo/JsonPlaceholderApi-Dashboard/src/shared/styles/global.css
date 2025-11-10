@@ -1,0 +1,51 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-layout {
+  min-height: 100vh;
+}
+
+.main-header,
+.main-sider {
+  position: sticky !important;
+  width: 100% !important;
+  background-color: #fff !important;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.main-sider {
+  height: calc(100vh - 64px);
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.main-content {
+  padding: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
