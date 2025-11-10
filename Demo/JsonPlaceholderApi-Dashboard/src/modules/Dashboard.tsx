@@ -2,9 +2,9 @@ import { Row } from "antd";
 
 import {
   CheckSquareOutlined,
-  CommentOutlined,
-  DatabaseOutlined,
-  FileTextOutlined,
+  // CommentOutlined,
+  // DatabaseOutlined,
+  // FileTextOutlined,
   PictureOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -12,11 +12,11 @@ import {
 import StatCard from "../components/StatCard";
 import type { StatDefinition } from "../shared/types/dashboard";
 import {
+  // useGetCommnetsQuery,
+  // useGetPhotosQuery,
+  // useGetTodosQuery,
   useGetAlbumsQuery,
-  useGetCommnetsQuery,
-  useGetPhotosQuery,
   useGetPostsQuery,
-  useGetTodosQuery,
   useGetUsersQuery,
 } from "../api/jsonPlaceholderApi";
 
@@ -29,13 +29,13 @@ export default function Dashboard() {
       icon: <CheckSquareOutlined />,
       useQueryHook: useGetPostsQuery,
     },
-    {
-      id: 2,
-      title: "Comments",
-      to: "/comments",
-      icon: <CommentOutlined />,
-      useQueryHook: useGetCommnetsQuery,
-    },
+    // {
+    //   id: 2,
+    //   title: "Comments",
+    //   to: "/comments",
+    //   icon: <CommentOutlined />,
+    //   useQueryHook: useGetCommnetsQuery,
+    // },
     {
       id: 3,
       title: "Albums",
@@ -43,20 +43,20 @@ export default function Dashboard() {
       icon: <PictureOutlined />,
       useQueryHook: useGetAlbumsQuery,
     },
-    {
-      id: 4,
-      title: "Photos",
-      to: "/photos",
-      icon: <DatabaseOutlined />,
-      useQueryHook: useGetPhotosQuery,
-    },
-    {
-      id: 5,
-      title: "Todos",
-      to: "/todos",
-      icon: <FileTextOutlined />,
-      useQueryHook: useGetTodosQuery,
-    },
+    // {
+    //   id: 4,
+    //   title: "Photos",
+    //   to: "/photos",
+    //   icon: <DatabaseOutlined />,
+    //   useQueryHook: useGetPhotosQuery,
+    // },
+    // {
+    //   id: 5,
+    //   title: "Todos",
+    //   to: "/todos",
+    //   icon: <FileTextOutlined />,
+    //   useQueryHook: useGetTodosQuery,
+    // },
     {
       id: 6,
       title: "Users",
