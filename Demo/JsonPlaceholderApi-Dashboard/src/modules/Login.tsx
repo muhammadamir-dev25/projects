@@ -24,6 +24,7 @@ export default function Login() {
       ADMIN_PASSWORD === values.password
     ) {
       localStorage.setItem("isAdmin", "true");
+      console.log("good");
       navigate("/");
     } else messageApi.error("Incorrect login or password");
   };
